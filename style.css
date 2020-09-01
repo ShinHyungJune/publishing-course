@@ -1,0 +1,8 @@
+/* 태그 자체를 선택해서 꾸미고 싶을 때(아래처럼 쓰면 모든 p 태그에 green색이 적용됨 */
+p {color:green;}
+
+/* text라는 class를 가진 태그를 꾸미고 싶을 때 */
+.text {color:red;}
+
+/* text라는 id를 가진 태그를 꾸미고 싶을 때 */
+#text {color:blue;}
