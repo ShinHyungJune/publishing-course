@@ -6,8 +6,70 @@
     <title>Document</title> <!-- 문서 제목 -->
     <link rel="stylesheet" href="./style.css"> <!-- css를 연결하는 태그 -->
     <script src="./common.js"></script> <!-- js를 연결하는 태그 -->
+    <style>
+        caption {display:none;}
+        th, td {padding:10px; border:1px solid #E1e1e1;}
+        th {background-color:blue; color:#fff;}
+    </style>
 </head>
 <body>
+    <!--제목만으로 구성된 가로행이 따로 있는 경우 -->
+    <table>
+        <caption>테스트 표</caption>
+        <thead>
+            <tr>
+                <!--scope는 이 제목에 대한 내용이 세로열로 나열되는지(col), 가로행으로 나열되는지 표기(row)-->
+                <th scope="col">제목1</th>
+                <th scope="col">제목2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+            </tr>
+        </tbody>
+    </table>
 
+    <br/><br/>
+
+    <!-- 제목만으로 구성된 가로행이 따로 없는 경우
+        -> 이럴 경우 thead로 제목 영역을 따로 잡지 않음
+    -->
+    <table>
+        <caption>테스트 표2</caption>
+        <tbody>
+            <tr>
+                <!--scope는 이 제목에 대한 내용이 세로열로 나열되는지(col), 가로행으로 나열되는지 표기(row)-->
+                <th scope="row">제목1</th>
+                <td>내용1</td>
+            </tr>
+            <tr>
+                <th scope="row">제목2</th>
+                <td>내용2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 셀 합치기 -->
+    <table>
+        <caption>테스트 표</caption>
+        <thead>
+            <tr>
+                <!-- colspan=2는 가로로 2칸 영역을 차지하라는 뜻(열 2칸치를 먹어라) -->
+                <th scope="col" colspan="2">제목1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- rowspan=2는 세로로 2칸 영역을 차지하라는 뜻(행 2칸치를 먹어라) -->
+                <td rowspan="2">내용1</td>
+                <td>내용2</td>
+            </tr>
+            <tr>
+                <td>내용1</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
