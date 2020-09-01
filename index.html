@@ -1,13 +1,55 @@
 <!DOCTYPE html> <!-- 이 문서가 HTML5 문서라는 뜻 -->
-<html lang="ko"> <!-- 웹 문서의 시작 --> 
-<head> <!-- 웹 문서에 대한 정보를 담는 태그 -->
-    <meta charset="UTF-8"> <!-- 문자 인코딩을 UTF-8로 하라는 뜻 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 초기엔 1배율로 페이지를 보여주라는 뜻 -->
-    <title>Document</title> <!-- 문서 제목 -->
-    <link rel="stylesheet" href="./style.css"> <!-- css를 연결하는 태그 -->
-    <script src="./common.js"></script> <!-- js를 연결하는 태그 -->
-</head>
-<body>
+<html lang="ko"> <!-- 웹 문서의 시작 -->
+    <head> <!-- 웹 문서에 대한 정보를 담는 태그 -->
+        <meta charset="UTF-8"> <!-- 문자 인코딩을 UTF-8로 하라는 뜻 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 초기엔 1배율로 페이지를 보여주라는 뜻 -->
+        <title>Document</title> <!-- 문서 제목 -->
+        <link rel="stylesheet" href="./style.css"> <!-- css를 연결하는 태그 -->
+        <script src="./common.js"></script> <!-- js를 연결하는 태그 -->
+    </head>
+    <body>
+        <form action="">
+            <!-- 일반텍스트 입력 -->
+            <label for="name">이름</label>
+            <input type="text" placeholder="이름을 입력해주세요" id="name">
 
-</body>
+            <br/><br/>
+
+            <!-- 비밀번호 입력 -->
+            <label for="password">패스워드</label>
+            <input type="password" placeholder="이름을 입력해주세요" id="password">
+
+            <br/><br/>
+
+            <!-- 체크박스 입력(복수선택 가능) -->
+            <label for="banana">사과</label>
+            <input type="checkbox" placeholder="이름을 입력해주세요" id="banana" name="favorite">
+
+            <label for="apple">바나나</label>
+            <input type="checkbox" placeholder="이름을 입력해주세요" id="apple" name="favorite">
+
+            <br/><br/>
+
+            <!-- radio 입력(단일선택만 가능 단, name을 통일시켜줘야함 주의!) -->
+            <label for="cherry">체리</label>
+            <input type="radio" placeholder="이름을 입력해주세요" id="cherry" name="fruits">
+   
+            <label for="berry">베리</label>
+            <input type="radio" placeholder="이름을 입력해주세요" id="berry" name="fruits">
+
+            <br/><br/>
+
+            <!-- 긴 문장 입력창 -->
+            <textarea name="" id="" cols="30" rows="10" placeholder="탈퇴사유를 입력해주세요."></textarea>
+
+            <br/><br/>
+            
+            <!-- select 옵션 선택 -->
+            <select name="" id="">
+                <option value="">선택지1</option>
+                <option value="">선택지2</option>
+            </select>
+        </form>
+    </body>
 </html>
